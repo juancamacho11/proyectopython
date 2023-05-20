@@ -8,7 +8,7 @@ default_args = {
 }
 
 
-dag = DAG('Dag_Tareas', default_args=default_args, schedule_interval=None)
+dag = DAG('Dag_Tareas', default_args=default_args, schedule_interval='0 0 * * *') # Programa el DAG para ejecutarse a la medianoche todos los días
 
 
 task1 = BashOperator(
